@@ -1,0 +1,10 @@
+n the general situation :
+
+the session id is sent to the user when his session is created.
+it is stored in a cookie (called, by default, PHPSESSID)
+that cookie is sent by the browser to the server with each request
+the server (PHP) uses that cookie, containing the session_id, to know which file corresponds to that user.
+The data in the sessions files is the content of $_SESSION, serialized (ie, represented as a string -- with a function such as serialize) ; and is un-serialized when the file is loaded by PHP, to populate the $_SESSION array.
+
+
+Sometimes, the session id is not stored in a cookie, but sent in URLs, too -- but that's quite rare, nowadays.
